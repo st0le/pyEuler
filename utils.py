@@ -23,3 +23,18 @@ def prime_factors(n):
 				n /= f
 			yield f,c
 		f += 2
+
+def is_palindrome(n):
+	s = str(n)
+	return s == s[::-1]
+	
+def gcd(a,b):
+	while b:
+		a,b = b,a%b
+	return a
+	
+def lcm(a,b):
+	return (a*b)/gcd(a,b)
+	
+def primes(limit=None):
+	
