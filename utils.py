@@ -36,5 +36,8 @@ def gcd(a,b):
 def lcm(a,b):
 	return (a*b)/gcd(a,b)
 	
-def primes(limit=None):
-	
+def is_prime(n):
+	if n <= 3 or n % 2 == 0 or n % 3 == 0 : return n == 2 or n == 3
+	for i in xrange(5,int(n**.5) + 1,6):
+		if n % i == 0 or n % (i + 2) == 0 : return False
+	return True

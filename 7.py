@@ -4,7 +4,6 @@
 from utils import *
 
 def solve():
-	R = range(101)
-	return sum(R)**2 - sum(map(lambda n:n**2,R))
+	return filter(is_prime,xrange(150000))[10000]
 
 print "Solution #7 :",solve()
