@@ -8,6 +8,7 @@ def fib(limit=None):
 		a,b = b,a+b
 
 def prime_factors(n):
+	if n == 0 : return 
 	if n % 2 == 0:
 		c = 0
 		while n % 2 == 0:
@@ -41,3 +42,9 @@ def is_prime(n):
 	for i in xrange(5,int(n**.5) + 1,6):
 		if n % i == 0 or n % (i + 2) == 0 : return False
 	return True
+
+def ndiv(n):
+	cnt = 1
+	for pf,c in prime_factors(n):
+		cnt *= (c + 1)
+	return cnt
