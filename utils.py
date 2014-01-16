@@ -48,3 +48,10 @@ def ndiv(n):
 	for pf,c in prime_factors(n):
 		cnt *= (c + 1)
 	return cnt
+
+def sdiv(n):
+    if n == 0: return 0
+    s = 1
+    for pf,c in prime_factors(n):
+        s *= (pf**(c+1) - 1) / (pf - 1)
+    return s
